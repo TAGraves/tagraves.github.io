@@ -200,6 +200,10 @@ nav li:first-child a::after {
     font-size: 1.2rem;
 }
 
+.blog-list {
+    padding: 0 1.8rem 1.8rem;
+}
+
 @media screen and (max-width: 1024px) {
     html {
         font-size: 1.7vw;
