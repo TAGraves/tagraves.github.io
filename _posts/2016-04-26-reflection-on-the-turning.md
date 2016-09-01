@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Reflection on the Turning
-tags: [joy, poetry, love, abiding]
 category: poetry
 ---
 

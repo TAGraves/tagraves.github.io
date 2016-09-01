@@ -204,6 +204,16 @@ nav li:first-child a::after {
     padding: 0 1.8rem 1.8rem;
 }
 
+@media screen and (min-width: 1680px) {
+    html {
+        font-size: 0.65vw;
+    }
+
+    .wrapper {
+        margin: 3.6rem 20rem;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     html {
         font-size: 1.7vw;

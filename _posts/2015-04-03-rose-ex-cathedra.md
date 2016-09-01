@@ -1,7 +1,6 @@
 ---
 layout: post
 title: rose ex Cathedra (a reflection for a good Friday)
-tags: [dread, good friday, love, resurrection]
 category: poetry
 ---
 
