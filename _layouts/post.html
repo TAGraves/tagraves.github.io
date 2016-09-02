@@ -1,8 +1,47 @@
-<html>
-    <head>
-        <title>{{ page.title }}</title>
-    </head>
-    <body>
-        {{ content }}
-    </body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>TAGraves -- {{ page.title }}</title>
+    {% include page-header.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+	  {% include header.html %}
+      <section class="content">
+          <section class="blog-list">
+            <h1>Blog</h1>
+            <article>
+                <div class="post-info">
+                    <a href="/blog/category/{{page.category | downcase}}" class="post-category category-{{page.category | downcase}}">
+                        <span>{{page.category}}</span>
+                    </a>
+                    <div class="post-date">
+                        <span class="day">{{page.date | date: '%d' }}</span>
+                        <div class="year-month">
+                            <span>{{page.date | date: '%Y' }}</span>
+                            <span>{{page.date | date: '%b' | upcase }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2><a href="{{post.url}}">{{page.title}}</a></h2>
+                    {{content}}
+                    <div class="post-navigation">
+                        <div class="post-next">
+                            {% if page.next.url %}
+                                <a href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+                            {% endif %}
+                        </div>
+                        <div class="post-prev">
+                            {% if page.previous.url %}
+                                <a href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+      </section>
+    </div>
+  </body>
 </html>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Reflection on the Turning
-category: poetry
+title: reflection on the turning
+category: Poetry
 ---
 
 these days when I wake up,  
@@ -10,6 +10,7 @@ it has become very clear in which direction I am to turn.
 toward you,  
 my love.  
 toward you.  
+<!--more-->
 
 one lovely morning I lost all my grip  
 on every thing that held me back from you,  

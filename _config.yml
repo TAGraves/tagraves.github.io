@@ -20,3 +20,4 @@ defaults:
             type: tags
         values:
             layout: "tag"
+excerpt_separator: <!--more-->
