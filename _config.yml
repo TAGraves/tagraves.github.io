@@ -21,3 +21,4 @@ defaults:
         values:
             layout: "tag"
 excerpt_separator: <!--more-->
+exclude: [vendor]

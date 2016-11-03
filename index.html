@@ -12,7 +12,7 @@ title: About Me
 	
 	<p>I specialize in JavaScript, but I'm fluent in most popular web languages, including HTML5, CSS3, SASS,
 	PHP, Python, and Ruby. My favorite development tool is currently <a href="http://reactjs.org">React</a>,
-	and I love testing out any new library that makes developers' lives easier.</p>
+	and I love trying any new library that makes developers' lives easier.</p>
 	
 	<p>I'm passionate for open source projects, and I'm happy to contribute especially to the documentation
 	on any projects. If you need someone to copy-edit, refactor, or even write your documentation,
@@ -24,14 +24,14 @@ title: About Me
 	philosophy can guide our decision making when we encounter disagreement within an agile environment. I
 	also am interested in conceptual analysis, both within the development world and more broadly.</p>
 
-	<p>Want to know more about me? <a href="#">Contact me</a> - I'm happy to chat programming, philosophy, or
+	<p>Want to know more about me? <a href="/contact/">Contact me</a> - I'm happy to chat programming, philosophy, or
 	theology.</p>
 </section>
 <aside class="blog-posts">
-	<h2><a href="#">Recent Posts</a></h2>
+	<h2><a href="/blog/">Recent Posts</a></h2>
 	<ol>
 		{% for post in site.posts %}
-		<li><a href="{{post.permalink}}">{{post.title}}</a> <time datetime="{{post.date | date: '%m-%d-%Y' }}">({{post.date | date: '%m/%d/%Y' }})</time></li>
+		<li><a href="{{post.url}}">{{post.title}}</a> <time datetime="{{post.date | date: '%m-%d-%Y' }}">({{post.date | date: '%m/%d/%Y' }})</time></li>
     	{% endfor %}
 	</ol>
 </aside>

@@ -200,7 +200,7 @@ nav li:first-child a::after {
     font-size: 1.2rem;
 }
 
-.blog-list {
+.blog-list, .contact {
     padding: 0 1.8rem 1.8rem;
     width: 100%;
 }
@@ -250,6 +250,13 @@ nav li:first-child a::after {
     background: #d14747;
 }
 
+.category-dev {
+    background: #6cc437;
+}
+
+.category-dev:hover {
+    background: #55992A;
+}
 
 .post-date .day {
     display: block;
@@ -295,12 +302,86 @@ nav li:first-child a::after {
     color: #33bee5;
 }
 
+.post-content ul {
+    list-style: initial;
+    margin-left: 1em;
+}
+
 .post-content .post-navigation {
     border-top: 1px solid #ededed;
     border-bottom: 1px solid #ededed;
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
+}
+
+.contact input, .contact textarea {
+    background: #f7f7f8;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    outline: none;
+    display: block;
+    margin: 1rem 0 1.25rem;
+    padding: 0.5rem;
+    width: 50%;
+    transition: all 0.2s linear;
+}
+
+.contact textarea {
+    width: 75%;
+    height: 20rem;
+    resize: none;
+}
+
+.contact input:focus, .contact textarea:focus {
+    background: #33bee5;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.contact button {
+    background: #33bee5;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.contact button:hover {
+    background: #f7f7f8;
+    color: #000;
+}
+
+.ajax-response {
+    display: none;
+    opacity: 0;
+    background: #fff;
+    color: #fff;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 0.5rem;
+    width: 75%;
+    margin-bottom: 1rem;
+    transition: opacity 1s linear, background 1s linear, color 1s linear;
+}
+
+.ajax-response.success, .ajax-response.error, .ajax-response.submitting {
+    display: block;
+    opacity: 1;
+    transition: opacity 1s linear, background 1s linear, color 1s linear;
+}
+
+.ajax-response.error {
+    background: #e94f4f;
+}
+
+.ajax-response.submitting {
+    background: #48dcb8;
+}
+
+.ajax-response.success {
+    background: #6cc437;
 }
 
 @media screen and (min-width: 1680px) {
