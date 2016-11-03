@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TAGraves - About Me
+title: About Me
 ---
 
 <section class="about-me">
@@ -30,7 +30,8 @@ title: TAGraves - About Me
 <aside class="blog-posts">
 	<h2><a href="#">Recent Posts</a></h2>
 	<ol>
-		<li><a href="#">Getting groovy with Groovy</a> <time datetime="03-12-1992">(03/12/1992)</time></li>
-		<li><a href="#">Getting linked in to LinkedIn</a> <time datetime="11-30-2015">(11/30/2015)</time></li>
+		{% for post in site.posts %}
+		<li><a href="{{post.permalink}}">{{post.title}}</a> <time datetime="{{post.date | date: '%m-%d-%Y' }}">({{post.date | date: '%m/%d/%Y' }})</time></li>
+    	{% endfor %}
 	</ol>
 </aside>

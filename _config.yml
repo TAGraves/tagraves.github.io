@@ -1,1 +1,23 @@
 permalink: blog/posts/:title/
+repository: TAGraves/tagraves.github.io
+collections:
+    categories:
+        output: true
+        permalink: blog/category/:name
+    tags:
+        output: true
+        permalink: blog/tag/:name
+defaults:
+    -
+        scope:
+            path: ""
+            type: categories
+        values:
+            layout: "category"
+    -
+        scope:
+            path: ""
+            type: tags
+        values:
+            layout: "tag"
+excerpt_separator: <!--more-->

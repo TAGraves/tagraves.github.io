@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>TAGraves -- {{ page.name }}</title>
+        {% include page-header.html %}
+    </head>
+    <body>
+        <div class="wrapper">
+            {% include header.html %}
+            <section class="blog-list">
+                <h1>{{page.name}} Blog</h1>
+                {% for post in site.posts %}
+                    {% if page.name == post.category %}
+                    <article>
+                        <div class="post-info">
+                            <a href="/blog/category/{{post.category}}" class="post-category category-{{post.category | downcase}}">
+                                <span>{{post.category}}</span>
+                            </a>
+                            <div class="post-date">
+                                <span class="day">{{post.date | date: '%d' }}</span>
+                                <div class="year-month">
+                                    <span>{{post.date | date: '%Y' }}</span>
+                                    <span>{{post.date | date: '%b' | upcase }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+                            {{post.excerpt}}
+                            <a href="{{post.url}}">Read more...</a>
+                        </div>
+                    </article>
+                    <!-- {% increment i %} -->
+                    {% endif %}
+                    {% if i > 10 %} {% break %} {% endif %}
+                 {% endfor %}
+            </section>
+        </div>
+    </body>
+</html>
