@@ -22,3 +22,5 @@ defaults:
             layout: "tag"
 excerpt_separator: <!--more-->
 exclude: [vendor]
+url: https://tagraves.com
+enforce_ssl: tagraves.com
