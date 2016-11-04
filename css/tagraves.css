@@ -430,6 +430,10 @@ nav li:first-child a::after {
     html {
         font-size: 3vw;
     }
+    
+    .wrapper {
+        margin: 0;
+    }
 
     .top-content {
         display: block;
