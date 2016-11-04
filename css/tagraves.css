@@ -91,6 +91,10 @@ header {
     height: 100%;
 }
 
+nav.mobile {
+    display: none;
+}
+
 nav {
     background: #3a454b;
     margin-top: 1.6rem;
@@ -217,7 +221,7 @@ nav li:first-child a::after {
 .blog-list .post-date {
     background: #3a454b;
     color: #fff;
-    width: 10rem;
+    width: 100%;
     height: 5rem;
     padding: 0.5rem 1rem;
     margin-top: 0.25rem;
@@ -422,8 +426,36 @@ nav li:first-child a::after {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     html {
-        font-size: 2.55vw;
+        font-size: 3vw;
+    }
+
+    .top-content {
+        display: block;
+    }
+
+    nav.normal {
+        display: none;
+    }
+
+    nav.mobile {
+        display: block;
+    }
+
+    .about-me img {
+        width: 100%;
+    }
+
+    .post-info {
+        display: none;
+    }
+
+    .blog-list .post-content {
+        margin-left: 0;
+    }
+
+    .contact * {
+        width: 100% !important;
     }
 }
